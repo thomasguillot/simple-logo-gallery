@@ -12,7 +12,7 @@
 		"format:js": "wp-scripts format src/",
 		"format:scss": "wp-scripts lint-style '**/*.scss' --fix",
 		"format": "npm run format:js && npm run format:scss",
-		"release": "npm run build && cd .. && zip -r simple-logo-gallery/simple-logo-gallery.zip simple-logo-gallery -x 'simple-logo-gallery/node_modules/*' 'simple-logo-gallery/.git/*' 'simple-logo-gallery/.gitignore' 'simple-logo-gallery/.DS_Store' 'simple-logo-gallery/src/*' 'simple-logo-gallery/phpcs.xml.dist' 'simple-logo-gallery/package-lock.json' 'simple-logo-gallery/composer.lock' 'simple-logo-gallery/.editorconfig' 'simple-logo-gallery/.eslintrc*' 'simple-logo-gallery/.prettierrc*'"
+		"release": "npm run build && cd .. && rm -f simple-logo-gallery/simple-logo-gallery.zip && zip -r simple-logo-gallery/simple-logo-gallery.zip simple-logo-gallery -x 'simple-logo-gallery/node_modules/*' 'simple-logo-gallery/.git/*' 'simple-logo-gallery/.gitignore' 'simple-logo-gallery/.DS_Store' 'simple-logo-gallery/src/*' 'simple-logo-gallery/phpcs.xml.dist' 'simple-logo-gallery/package-lock.json' 'simple-logo-gallery/composer.lock' 'simple-logo-gallery/.editorconfig' 'simple-logo-gallery/.eslintrc*' 'simple-logo-gallery/.prettierrc*' 'simple-logo-gallery/package.json' 'simple-logo-gallery/composer.json' 'simple-logo-gallery/webpack.config.js' 'simple-logo-gallery/scripts/*'"
 	},
 	"license": "GPL-2.0-or-later",
 	"devDependencies": {
