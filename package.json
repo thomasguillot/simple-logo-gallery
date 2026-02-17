@@ -1,0 +1,31 @@
+{
+	"name": "simple-logo-gallery",
+	"version": "1.0.0",
+	"description": "Simple Logo Gallery block for WordPress — normalized logo strip via react-logo-soup",
+	"scripts": {
+		"build": "wp-scripts build --output-path=dist && node scripts/write-view-asset.js",
+		"start": "wp-scripts start --output-path=dist",
+		"lint:js": "wp-scripts lint-js src/",
+		"lint:scss": "wp-scripts lint-style '**/*.scss'",
+		"lint:php": "composer lint",
+		"lint": "npm run lint:js && npm run lint:scss && npm run lint:php",
+		"format:js": "wp-scripts format src/",
+		"format:scss": "wp-scripts lint-style '**/*.scss' --fix",
+		"format": "npm run format:js && npm run format:scss",
+		"release": "npm run build && cd .. && zip -r simple-logo-gallery/simple-logo-gallery.zip simple-logo-gallery -x 'simple-logo-gallery/node_modules/*' 'simple-logo-gallery/.git/*' 'simple-logo-gallery/.gitignore' 'simple-logo-gallery/.DS_Store' 'simple-logo-gallery/src/*' 'simple-logo-gallery/phpcs.xml.dist' 'simple-logo-gallery/package-lock.json' 'simple-logo-gallery/composer.lock' 'simple-logo-gallery/.editorconfig' 'simple-logo-gallery/.eslintrc*' 'simple-logo-gallery/.prettierrc*'"
+	},
+	"license": "GPL-2.0-or-later",
+	"devDependencies": {
+		"@wordpress/scripts": "^27.5.0",
+		"@wordpress/stylelint-config": "^21.0.0"
+	},
+	"dependencies": {
+		"@wordpress/block-editor": "^12.15.0",
+		"@wordpress/blocks": "^12.24.0",
+		"@wordpress/components": "^25.13.0",
+		"@wordpress/element": "^5.24.0",
+		"@wordpress/i18n": "^4.47.0",
+		"@wordpress/icons": "^9.42.0",
+		"react-logo-soup": "^0.4.0"
+	}
+}
