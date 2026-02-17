@@ -1,6 +1,6 @@
 {
 	"name": "simple-logo-gallery",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Simple Logo Gallery block for WordPress — normalized logo strip via react-logo-soup",
 	"scripts": {
 		"build": "wp-scripts build --output-path=dist && node scripts/write-view-asset.js",

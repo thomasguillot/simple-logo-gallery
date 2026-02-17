@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Simple Logo Gallery
  * Description: A block that displays a row of logos normalized with react-logo-soup, with simple controls for gap and size.
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: Thomas Guillot
  * Author URI: https://thomasguillot.com/
  * License: GPL-2.0-or-later
